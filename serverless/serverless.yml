@@ -1,0 +1,25 @@
+service: first-lambda
+frameworkVersion: '3'
+
+plugins:
+  - serverless-offline
+
+
+provider:
+  name: aws
+  runtime: python3.9
+
+functions:
+  five_attributes:
+    handler: handler.five_attributes
+    events:
+      - http:
+          path: /five-attributes
+          method: get
+
+  ten_attributes:
+    handler: handler.ten_attributes
+    events:
+      - http:
+          path: /ten-attributes
+          method: get
