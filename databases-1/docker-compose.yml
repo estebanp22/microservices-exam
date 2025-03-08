@@ -1,0 +1,36 @@
+version: '3.7'
+services:
+  db:
+    build: 
+      context: ./MySQL
+      dockerfile: Dockerfile
+    container_name: mysql_exam
+    restart: always
+    ports:
+      - 4600:3306
+    volumes:
+      - ./Config/mysql:/var/lib/mysql
+    hostname: apps_database
+    networks:
+      - exam_apps
+    healthcheck:
+        test: ["CMD","mysql", "-u", "root", "-p2210"]
+        interval: 30s
+        timeout: 10s
+        retries: 5
+# --------------------------------------------------------------------
+  # - The adminer is a tool for managing content in databases.
+  adminer:
+    image: adminer
+    container_name: adminer_wms
+    restart: always
+    ports:
+      - 8001:8080
+    networks:
+      - exam_apps
+# --------------------------------------------------------------------
+
+networks:
+  exam_apps:
+      driver: bridge
+      name: exam_apps
