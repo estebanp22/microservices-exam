@@ -1,3 +1,29 @@
 database-1/Config/
 database-2/Config/
 
+# Distribution / packaging
+fastAPI/.Python
+fastAPI/env/
+fastAPI/build/
+fastAPI/develop-eggs/
+fastAPI/dist/
+fastAPI/downloads/
+fastAPI/eggs/
+fastAPI/.eggs/
+fastAPI/lib/
+fastAPI/lib64/
+fastAPI/parts/
+fastAPI/sdist/
+fastAPI/var/
+fastAPI/*.egg-info/
+fastAPI/.installed.cfg
+fastAPI/*.egg
+
+# Serverless directories
+fastAPI/.serverless
+
+fastAPI/node_modules/
+
+fastAPI/.venv/
+fastAPI/vnv/
+
