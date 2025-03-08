@@ -27,4 +27,36 @@ serverless/node_modules/
 serverless/.venv/
 serverless/vnv/
 
+# Ignore the virtual environment
+fast-api/venv/
+
+# Ignore Python cache files
+fast-api/__pycache__/
+fast-api/*.pyc
+fast-api/*.pyo
+fast-api/*.pyd
+
+# Ignore environment configuration files
+fast-api/.env
+fast-api/*.env
+fast-api/*.venv
+
+# Ignore log files
+fast-api/logs/
+fast-api/*.log
+
+# Ignore generated dependency files
+fast-api/pip-log.txt
+fast-api/pip-delete-this-directory.txt
+
+# Ignore local database files
+fast-api/*.sqlite3
+fast-api/*.db
+
+# Ignore IDE and OS configuration files
+fast-api/.vscode/
+fast-api/.idea/
+fast-api/.DS_Store
+fast-api/*.swp
+
 
